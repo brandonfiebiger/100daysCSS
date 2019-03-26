@@ -1,0 +1,58 @@
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #ff00cc;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #333399, #ff00cc);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #333399, #ff00cc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	display: flex;
+	justify-content: center;
+	flex: 1 1 auto;	
+}
+
+.tab {
+	display: flex;
+	width: 25%;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+            linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+            linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+	transition: all .8s;
+}
+
+.tab:nth-child(even) {
+	background: linear-gradient(#e66465, #9198e5);
+}
+
+p {
+	opacity: 0;
+	color: white;
+	font-weight: bold;
+	transition: all .8s;
+}
+
+.tab:hover {
+	width: 70%;
+}
+
+.tab:hover p {
+	opacity: 1;
+	transform: scale(2.8);
+}
